@@ -1,0 +1,156 @@
+/* ============================================================
+   SIRU HE · 极简博客主题
+   单栏居中 · 系统字体 · 虚线分隔 · 跟随系统深色模式
+   ============================================================ */
+
+:root {
+  --width: 720px;
+  --font-main: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-secondary: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-scale: 1em;
+  --background-color: #fff;
+  --heading-color: #222;
+  --text-color: #444;
+  --link-color: #3273dc;
+  --visited-color: #8b6fcb;
+  --code-background-color: #f2f2f2;
+  --code-color: #222;
+  --line-color: #999;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #01242e;
+    --heading-color: #eee;
+    --text-color: #ddd;
+    --link-color: #8cc2dd;
+    --visited-color: #8b6fcb;
+    --code-background-color: #000;
+    --code-color: #ddd;
+    --line-color: #4a6b76;
+  }
+}
+
+body {
+  font-family: var(--font-secondary);
+  font-size: var(--font-scale);
+  margin: auto;
+  padding: 20px;
+  max-width: var(--width);
+  text-align: left;
+  background-color: var(--background-color);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  color: var(--heading-color);
+}
+
+a { color: var(--link-color); cursor: pointer; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+nav a { margin-right: 8px; }
+
+strong, b { color: var(--heading-color); }
+
+time {
+  font-family: monospace;
+  font-style: normal;
+  font-size: 15px;
+}
+
+main { line-height: 1.6; }
+main p { margin-block: 1em; }
+main ul, main ol { padding-left: 1.4em; }
+main li { margin-block: 0.3em; }
+
+table { width: 100%; }
+
+hr { border: 0; border-top: 1px dashed var(--line-color); }
+
+img { max-width: 100%; height: auto; }
+
+code {
+  font-family: monospace;
+  padding: 2px 5px;
+  background-color: var(--code-background-color);
+  color: var(--code-color);
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+blockquote {
+  border-left: 1px solid var(--line-color);
+  padding-left: 20px;
+  color: var(--code-color);
+  font-style: italic;
+  margin-block: 1em;
+}
+
+footer { padding: 25px 0; text-align: center; font-size: 0.9em; }
+
+/* ---------- 头部 ---------- */
+
+header .title { display: inline-block; }
+
+header .title:hover { text-decoration: none; }
+
+header .title h1 { font-size: 1.5em; margin-block: 0.6em 0.2em; }
+
+/* ---------- 文章列表 ---------- */
+
+ul.blog-posts {
+  list-style-type: none;
+  padding: unset;
+}
+
+ul.blog-posts li {
+  display: flex;
+  align-items: baseline;
+}
+
+ul.blog-posts li span {
+  flex: 0 0 130px;
+}
+
+ul.blog-posts li a:visited { color: var(--visited-color); }
+
+/* ---------- 单篇文章 ---------- */
+
+article h1 { font-size: 1.6em; line-height: 1.3; margin-block: 0.6em 0.2em; }
+
+article .post-meta { margin-top: 0; font-size: 0.9em; }
+
+/* 代码块 */
+.highlight, .code {
+  padding: 1px 15px;
+  background-color: var(--code-background-color);
+  color: var(--code-color);
+  border-radius: 3px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  overflow-x: auto;
+}
+
+.highlight pre { margin: 1em 0; }
+.highlight code { background: none; padding: 0; }
+
+/* ---------- 首页 ---------- */
+
+.intro p { margin-block: 1em; }
+
+/* ---------- 响应式 ---------- */
+
+@media (max-width: 520px) {
+  ul.blog-posts li { flex-direction: column; }
+  ul.blog-posts li span { flex: none; }
+}
+
+/* 尊重减少动态偏好 */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
