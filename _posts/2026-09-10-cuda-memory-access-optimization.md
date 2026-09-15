@@ -2,6 +2,8 @@
 layout: post
 title: "CUDA Memory Access: From Coalescing to Double-Buffered Pipelines"
 date: 2026-09-10 21:30:00 +0800
+lang: en
+permalink: /en/2026/09/cuda-memory-access-optimization/
 categories: cuda
 tags: [cuda, gpu, sgemm, memory]
 ---

@@ -4,7 +4,13 @@ layout: default
 
 <article>
   <h1>{{ page.title }}</h1>
-  <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b, %Y" }}</time></p>
+  <p class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{% if page.lang == 'en' %}{{ page.date | date: "%d %b, %Y" }}{% else %}{{ page.date | date: "%Y年%m月%d日" }}{% endif %}</time>
+  </p>
 
   {{ content }}
+
+  <p class="post-back">
+    {% if page.lang == 'en' %}<a href="/en/blog/">← All posts</a>{% else %}<a href="/blog/">← 返回文章列表</a>{% endif %}
+  </p>
 </article>

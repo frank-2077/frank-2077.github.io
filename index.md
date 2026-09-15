@@ -1,29 +1,29 @@
 ---
 layout: default
-title: Home
+title: 首页
+lang: zh
 permalink: /
+alt_url: /en/
 ---
 
 <div class="intro">
-  <p>Hi, I'm <strong>SIRU HE</strong> — an <strong>LLM Inference / AI Infra engineer</strong>.</p>
+  <p>你好，我是<strong>何思如</strong>，一名<strong>大模型推理 / AI Infra 工程师</strong>。</p>
 
   <p>
-    I work on the low-level layer of AI: when models get bigger and need to run fast and efficiently
-    on phones and servers, someone has to optimize the parts closest to the hardware —
-    GPU kernels, inference engines, distributed systems. My job is to make large models
-    <strong>run, run fast, and run reliably</strong> on real devices.
+    我做的是 AI 的「底层工程」——当模型越来越大、要在手机和服务器上跑得又快又省时，
+    就需要有人去优化那些最贴近硬件的部分：GPU 算子、推理引擎、分布式系统。
+    我的工作就是让大模型在真实设备上<strong>跑起来、跑得快、跑得稳</strong>。
   </p>
 
   <p>
-    From kernels to systems: CUDA kernels → inference engines → on-device deployment →
-    distributed train-serve consistency. I currently work on on-device multimodal inference
-    engines at <strong>ModelBest</strong>, and contribute to open-source projects like
-    <a href="https://github.com/RL-Align/RL-Kernel">RL-Kernel</a> and
-    <a href="https://github.com/vllm-project/vllm-omni">vLLM-Omni</a>.
+    从算子到系统，一条完整的底层链路：CUDA Kernel → 推理引擎 → 端侧部署 → 分布式训推一致性。
+    目前在<strong>面壁智能</strong>做端侧多模态推理引擎，也向
+    <a href="https://github.com/RL-Align/RL-Kernel">RL-Kernel</a>、
+    <a href="https://github.com/vllm-project/vllm-omni">vLLM-Omni</a> 等开源项目贡献代码。
   </p>
 
   <p>
-    I write about these things on the <a href="{{ '/blog/' | relative_url }}">blog</a>.
-    You can reach me at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+    我在这里写一些技术笔记，见<a href="/blog/">文章列表</a>。
+    可以通过 <a href="mailto:{{ site.email }}">{{ site.email }}</a> 联系我。
   </p>
 </div>
