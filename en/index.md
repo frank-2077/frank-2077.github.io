@@ -7,19 +7,13 @@ alt_url: /
 ---
 
 <div class="intro">
-  <p>Hi, I'm <strong>SIRU HE</strong> — an <strong>LLM Inference / AI Infra engineer</strong>.</p>
+  <p>Hi, I'm <strong>SIRU HE</strong>, a Master's student in Electronic Information at SUSTech (jointly trained with SIAT-CAS), working on <strong>LLM inference and AI infrastructure</strong>.</p>
 
   <p>
-    I work on the low-level layer of AI: when models get bigger and need to run fast and efficiently
-    on phones and servers, someone has to optimize the parts closest to the hardware —
-    GPU kernels, inference engines, distributed systems. My job is to make large models
-    <strong>run, run fast, and run reliably</strong> on real devices.
-  </p>
-
-  <p>
-    From kernels to systems: CUDA kernels → inference engines → on-device deployment →
-    distributed train-serve consistency. I currently work on on-device multimodal inference
-    engines at <strong>ModelBest</strong>, and contribute to open-source projects like
+    My internship experience sits at the inference-system and kernel layers: at <strong>ModelBest</strong>
+    I worked on the multimodal inference runtime for MiniCPM-o 4.5 and VoxCPM2, and at
+    <strong>Shanghai Guangyu Xinchen</strong> I optimized LLM Decode-stage operators and worked on
+    megakernel fusion. I also contribute to open-source projects like
     <a href="https://github.com/RL-Align/RL-Kernel">RL-Kernel</a> and
     <a href="https://github.com/vllm-project/vllm-omni">vLLM-Omni</a>.
   </p>

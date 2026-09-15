@@ -7,28 +7,31 @@ alt_url: /about/
 ---
 
 <div class="intro">
-  <p>I'm <strong>SIRU HE</strong> (何思如), an <strong>LLM Inference / AI Infra engineer</strong>, currently doing a Master's in Electronic Information at SUSTech, jointly trained with SIAT-CAS.</p>
+  <p>I'm <strong>SIRU HE</strong>, a Master's student in Electronic Information at SUSTech, jointly trained with SIAT-CAS, focused on <strong>LLM inference and AI infrastructure</strong>.</p>
 
   <p>
-    My focus is the low-level engineering of AI. As models grow and have to run fast and cheaply
-    on both phones and servers, someone needs to optimize the layers closest to the hardware:
-    GPU kernels, inference engines, and distributed systems.
+    My internship experience sits at the inference-system and kernel layers: at <strong>ModelBest</strong>
+    I worked on the multimodal inference runtime for MiniCPM-o 4.5 and VoxCPM2; at
+    <strong>Shanghai Guangyu Xinchen</strong> I optimized LLM Decode-stage operators on a self-developed
+    edge NPU and worked on Decode-stage megakernel fusion.
   </p>
 
   <ul>
-    <li><strong>Kernels</strong> — CUDA / Triton operator development, memory-access and Tensor Core optimization</li>
-    <li><strong>Inference systems</strong> — building inference engines, KV Cache, CUDA Graph, speculative decoding</li>
-    <li><strong>On-device deployment</strong> — NPU optimization and streaming inference for multimodal LLMs</li>
-    <li><strong>Train-serve consistency</strong> — reproducible train vs. inference results across distributed clusters</li>
+    <li><strong>CUDA / Triton kernels</strong> — memory access, Tensor Core, deterministic computation; cycle-level optimization of memory-bound operators</li>
+    <li><strong>Inference engines</strong> — from building an engine to tuning it: TP sharding, KV Cache management, MoE execution, CUDA Graph, speculative decoding</li>
+    <li><strong>Serving & framework contribution</strong> — internals of vLLM, Megatron, llama.cpp/ggml; stability and performance PRs to vLLM-Omni</li>
+    <li><strong>Distributed & train-serve consistency</strong> — Batch Invariance and deterministic reductions; bitwise-identical logprobs on 8×H100</li>
+    <li><strong>Profiling & tooling</strong> — Nsight Compute, PyTorch Profiler, Perf, GDB; CI and automation workflows</li>
   </ul>
 
-  <p>Tech stack: C++ · CUDA · Triton · Python · PyTorch · vLLM · llama.cpp/ggml</p>
+  <p>Tech stack: C++ / CUDA / Triton / Python / PyTorch / vLLM / Megatron / llama.cpp (ggml) / NCCL / Docker / CMake / Git</p>
+
+  <p>Publications: <strong>SteadyFlow-Edge</strong> (first author, ACAI), <strong>RT-EdgeDetect</strong> (first author, APPT)</p>
 
   <hr>
 
   <p>
     Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
-    GitHub: <a href="https://github.com/frank-2077">frank-2077</a><br>
-    Homepage: <a href="https://frank-2077.github.io">frank-2077.github.io</a>
+    GitHub: <a href="https://github.com/frank-2077">frank-2077</a>
   </p>
 </div>
