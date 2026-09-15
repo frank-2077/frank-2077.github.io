@@ -1,6 +1,6 @@
 /* ============================================================
    SIRU HE · minimal blog
-   Single column, system fonts, dashed rules, auto dark mode.
+   Dark by default (neutral black-grey), single column, system fonts.
    ============================================================ */
 
 :root {
@@ -11,28 +11,30 @@
                     system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-scale: 1.0625em;
 
-  --background-color: #fdfdfc;
-  --heading-color: #1a1a1a;
-  --text-color: #3d3d3d;
-  --link-color: #1f6feb;
-  --visited-color: #8250df;
-  --code-background-color: #f4f4f2;
-  --code-color: #1a1a1a;
-  --line-color: #b8b8b8;
+  /* 深色（默认）：中性黑灰 */
+  --background-color: #141414;
+  --heading-color: #f2f2f2;
+  --text-color: #c8c8c8;
+  --link-color: #7cb7f0;
+  --visited-color: #b39ddb;
+  --code-background-color: #1f1f1f;
+  --code-color: #d6d6d6;
+  --line-color: #3a3a3a;
   --muted-color: #8a8a8a;
 }
 
-@media (prefers-color-scheme: dark) {
+/* 跟随系统的浅色模式（若你的系统是浅色，会显示这套） */
+@media (prefers-color-scheme: light) {
   :root {
-    --background-color: #01242e;
-    --heading-color: #f0f4f4;
-    --text-color: #d8e3e3;
-    --link-color: #8cc2dd;
-    --visited-color: #b39ddb;
-    --code-background-color: #001a22;
-    --code-color: #d8e3e3;
-    --line-color: #3c5b64;
-    --muted-color: #8aa4ac;
+    --background-color: #fdfdfc;
+    --heading-color: #1a1a1a;
+    --text-color: #3d3d3d;
+    --link-color: #1f6feb;
+    --visited-color: #8250df;
+    --code-background-color: #f4f4f2;
+    --code-color: #1a1a1a;
+    --line-color: #b8b8b8;
+    --muted-color: #8a8a8a;
   }
 }
 
@@ -48,7 +50,7 @@ body {
   background-color: var(--background-color);
   word-wrap: break-word;
   overflow-wrap: break-word;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -77,7 +79,7 @@ time {
   letter-spacing: -0.01em;
 }
 
-main { line-height: 1.7; }
+main { line-height: 1.75; }
 main p { margin-block: 1.1em; }
 main ul, main ol { padding-left: 1.4em; }
 main li { margin-block: 0.35em; }
